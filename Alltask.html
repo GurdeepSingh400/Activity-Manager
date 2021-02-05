@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+
+    <link rel="stylesheet" href="css/evo-calendar.css">
+
+    
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/Alltask.css">
+    <link rel="stylesheet" type="text/css" href="css/serachfiled.css">
+
+
+
+</head>
+
+<body onload="init()">
+    <div id="form2">
+
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Activity Manager</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About US</a></li>
+                    <li><a href="#">Contact US</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+
+        </div>
+
+        <div id="wrapper">
+            <div class="overlay"></div>
+
+
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+
+                        <a href="../demoactivity/homepage.html">Home</a>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../demoactivity/planyourday.html">Plan Your
+                            Day</a>
+
+                    <li>
+                        <a href="../demoactivity/Alltask.html">All Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="../demoactivity/cal.html" >Calendar</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div id="page-content-wrapper">
+                <button type="button" id="vvv" class="hamburger is-closed" data-toggle="offcanvas">
+
+
+
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="evoCalendar" class="divs"></div>
+        
+        <div id="allt" class="container">
+            <div class="row">
+                <div  id="allt2"class="col-sm-6">
+
+
+                    <table id="crud">
+                        <div>
+                            <tr>
+                                <th>
+
+                                    <header>
+                                        <h1>Activity Manger</h1>
+                                    </header>
+                                    <br>
+                                    <br>
+                                    <form action="#" id="frm"  autocomplete="off">
+                                        <div class="form-group">
+                                            <label class="tasklabel">Task</label>
+                                            <input id="taskinput" placeholder="Enter a Task" type="text">
+
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div>
+                                            <label class="tasklabel">Status</label>
+                                            <select id="selectstatus">
+                                                <option value="---">---</option>
+                                                <option value="Start">Start</option>
+                                                <option value="In-Progress">In-Progress</option>
+                                                <option value="Completed">Completed</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div>
+                                            <label class="tasklabel">Priority</label>
+                                            <select id="selectpriority">
+                                                <option value="---">---</option>
+                                                <option value="Low">Low</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="High">High</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                        <br>
+                                        <div>
+                                        <label class="tasklabel" >Date</label>
+                                        <input id="date" type="date">
+                                            </div>
+                                        <div>
+
+                                            <button type="submit" value="submit" id="submit" onclick="registered()">Save</button>
+                                            <button type="button" id="reset" onclick="resetbtn()">Reset</button>
+                                        </div>
+
+                                    </form>
+                                    </th>
+                                    </tr>
+                        </div>
+                    </table>
+                </div>
+            </div>
+        </div>
+      
+        <div id="existingtask" class="container">
+            <div id="h1id"> 
+            <h1>ALL-TASK</h1>
+          
+
+       
+
+        </div>
+
+        <input type="text" id="myInput" onkeyup="serach()" placeholder="Search for names.." title="Type in a name">
+            <table id="tables">
+                <thead>
+                    <tr>
+                        <th onclick="sorttable(0)">Task</th>
+                        <th onclick="sorttable(1)">Status</th>
+                        <th onclick="sorttable(2)">Priority</th>
+                        <th onclick="sorttable(3)">Date</th>
+                        <!-- <th>Action</th> -->
+
+                    </tr>
+                </thead>
+                <tbody id="tablerows"> 
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+       
+
+        
+</body>
+
+<script src="js/jquery-3.5.1.js"></script>
+
+<script src="js/index.js"></script>
+<script src="js/evo-calendar1.js"></script>
+
+<script src="js/Alltask.js" ></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</html>
